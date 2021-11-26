@@ -1,0 +1,92 @@
+:root {
+  --field-size: 100px;
+  --hover-color: #DDD;
+  --game-bg-color: #FFF;
+}
+
+* {
+  font-size: 35px;
+  margin: 0;
+  padding: 0;
+}
+
+#react-container {
+  display: block;
+  margin: 150px auto;
+  width: calc(var(--field-size) * 3);
+}
+
+.board {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-left: 1px solid;
+  box-shadow: 0 0 11px 0;
+}
+
+.field {
+  background-color: var(--game-bg-color);
+  transition: 230ms; 
+  width: var(--field-size);
+  height: var(--field-size);
+  line-height: var(--field-size);
+  border-top: 0;
+  border-bottom: 1px solid;
+  border-right: 1px solid;
+  border-left: 0;
+  cursor: pointer;
+}
+
+.field:disabled {
+  color: black;
+  cursor: default;
+}
+
+.field:hover {
+  background-color: var(--hover-color);
+  transition: 230ms;
+}
+
+.play {
+  text-align: center;
+  box-shadow: 0 0 11px 0;
+  width: calc(var(--field-size) * 3 - 1px);
+  border: 1px solid;
+}
+
+.play-btn {
+  background-color: var(--game-bg-color);
+  transition: 230ms;
+  width: calc(var(--field-size) * 3 - 2px);
+  height: 70px;
+  border: 0;
+  border-top: 1px solid;
+}
+
+.play-btn:hover {
+  background-color: var(--hover-color);
+  transition: 230ms;
+  cursor: pointer;
+}
+
+.play-difficulty {
+  display: inline-flex;
+  line-height: 50px;
+}
+
+.play-difficulty p {
+  font-size: 20px;
+}
+
+.play-difficulty-display {
+  width: 100px;
+}
+
+.play-difficulty-modifier {
+  cursor: pointer;
+  width: 100px;
+}
+
+.result {
+  text-align: center;
+  line-height: 70px; 
+}
